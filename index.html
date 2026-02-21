@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Valentine 3D Cinematic</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+html,body{
+margin:0;
+padding:0;
+overflow:hidden;
+background:#000;
+width:100%;
+height:100%;
+font-family:sans-serif;
+}
+#canvas-container{
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+}
+#loading{
+position:fixed;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+color:#ff66cc;
+font-size:18px;
+letter-spacing:2px;
+}
+</style>
+</head>
+<body>
+
+<div id="canvas-container"></div>
+<div id="loading">Loading Valentine Scene...</div>
+
+<script type="module">
+
+import * as THREE from 'https://jspm.dev/three'
+
+import { Engine } from './Engine.js'
+import { ValentineScene } from './modules/ValentineScene.js'
+
+const container=document.getElementById('canvas-container')
+
+const engine=new Engine({
+container:container,
+antialias:true,
+alpha:false
+})
+
+await engine.init()
+
+const valentineScene=new ValentineScene(engine)
+
+valentineScene.init()
+
+valentineScene.start()
+
+document.getElementById('loading').style.display='none'
+
+window.addEventListener('resize',()=>{
+engine.resize()
+})
+
+window.engine=engine
+window.scene=valentineScene
+
+</script>
+
+</body>
+</html>
