@@ -1592,8 +1592,6 @@ this.stop()
 
 }
 
-}
-
 stop(){
 
 if(!this.running)return
