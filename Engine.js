@@ -1707,7 +1707,7 @@ this.frameGraph=null
 this.running=false
 this.initialized=false
 this.destroyed=true
-
+}
 isRunning(){return this.running}
 isInitialized(){return this.initialized}
 isDestroyed(){return this.destroyed}
