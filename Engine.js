@@ -3872,6 +3872,7 @@ FILM-ACCURATE COLOR PHYSICS
 ========================================================= */
 
 const PT_SPECTRAL_SAMPLES=31
+class PTSpectralSample{
 constructor(lambda=550,intensity=1){
 
 this.lambda=lambda
