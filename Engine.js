@@ -2382,16 +2382,6 @@ const PT_SPECTRAL_LAMBDA_MAX=globalThis.PT_SPECTRAL_LAMBDA_MAX??830
 globalThis.PT_SPECTRAL_LAMBDA_MAX=PT_SPECTRAL_LAMBDA_MAX
 const PT_SPECTRAL_BANDS=31
 
-const PTSpectralSample=globalThis.PTSpectralSample||class PTSpectralSample{
-constructor(lambda=550,intensity=0){
-this.lambda=lambda
-this.intensity=intensity
-}
-clone(){
-return new PTSpectralSample(this.lambda,this.intensity)
-}
-}
-
 class PTSpectralDistribution{
 constructor(){
 this.samples=new Float32Array(PT_SPECTRAL_BANDS)
