@@ -42,17 +42,21 @@ letter-spacing:2px;
 import * as THREE from 'https://jspm.dev/three'
 
 import { Engine } from './Engine.js'
+import { EngineCompatibilityLayer } from './modules/EngineCompatibilityLayer.js'
 import { ValentineScene } from './modules/ValentineScene.js'
-
 const container=document.getElementById('canvas-container')
 
-const engine=new Engine({
+const engineCore=new Engine({
 container:container,
 antialias:true,
 alpha:false
 })
 
-await engine.init()
+await engineCore.init()
+
+const engine=new EngineCompatibilityLayer(engineCore)
+
+engine.init()
 
 const valentineScene=new ValentineScene(engine)
 
