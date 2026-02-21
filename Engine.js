@@ -2603,8 +2603,6 @@ return radiance
 
 }
 }
-
-}
 /* =========================================================
 RTX-STYLE GLOBAL ILLUMINATION INTEGRATOR
 MULTI-BOUNCE INDIRECT LIGHT SOLVER
