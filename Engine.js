@@ -3869,8 +3869,6 @@ TRUE WAVELENGTH LIGHT TRANSPORT
 FILM-ACCURATE COLOR PHYSICS
 ========================================================= */
 
-const PT_SPECTRAL_LAMBDA_MIN=380
-const PT_SPECTRAL_LAMBDA_MAX=780
 const PT_SPECTRAL_SAMPLES=31
 
 class PTSpectralSample{
